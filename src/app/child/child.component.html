@@ -1,0 +1,20 @@
+<div class="container container-child mt-5 p-3">
+    <h2>Child</h2>
+    <div class="row text-center">
+        <h4>message: {{message}} </h4>
+        <div class="col-12 d-flex justify-content-center">
+            <!-- Servicios -->
+            <button (click)="serviceMessageChild()" class="btn btn-primary mx-2">
+                Use Service
+            </button>
+            <!-- Output -->
+            <button (click)="sendMessage()"  class="btn btn-primary mx-2">
+                Use Output Event
+            </button>
+            <!-- Observable -->
+            <button (click)="messageObser()" class="btn btn-primary mx-2">
+                Use Observable
+            </button>
+        </div>
+    </div>
+</div>

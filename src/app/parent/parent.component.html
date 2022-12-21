@@ -1,0 +1,27 @@
+
+<div  class="container main mt-5 p-3">
+    
+    <h2>Parent</h2>
+    <div class="row text-center">
+        <h4>message: {{messageFromChild}} </h4>
+        <div class="col-12 d-flex justify-content-center">
+            <!-- Servicios -->
+            <button (click)="messageService()" class="btn btn-primary mx-2">
+                Use Service
+            </button>
+            <!-- Input -->
+            <button (click)="messageInput()" class="btn btn-primary mx-2">
+                Use Input Event
+            </button>
+            <!-- Observable -->
+            <button (click)="messageOutput()" class="btn btn-primary mx-2">
+                Use Observable
+            </button>
+        </div>
+    </div>
+
+    <app-child 
+            [message]="messageForChild"
+            (messageFromChildren)="catchMessage( $event )">
+    </app-child>
+</div>
