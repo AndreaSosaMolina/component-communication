@@ -6,23 +6,20 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class ServicioService {
   // variables para mostrar el mensaje en ambos componentes
-  textServiceParent: string = ' PARENT USING SERVICE';
-  textServiceChild: string = 'CHILD USING SERVICE';
+  textServiceParent: string = 'Parent using Service';
+  textServiceChild: string = 'Child using Service';
 
   // variables con $ para declarar que son observables
-  messageObservParent$: string = 'PARENT USING SUBJECT';
-  messageObservChild$: string = 'CHILD USING SUBJECT';
+  messageObservParent$: string = 'Parent using Subject';
+  messageObservChild$: string = 'Child using Subject';
 
 
   // propiedades de tipo observables
-  subParent: BehaviorSubject<string> = new BehaviorSubject(this.messageObservParent$);
-  subChild: BehaviorSubject<string> = new BehaviorSubject(this.messageObservChild$);
+  private subParent: BehaviorSubject<string> = new BehaviorSubject(this.messageObservParent$);
+  private subChild: BehaviorSubject<string> = new BehaviorSubject(this.messageObservChild$);
 
   constructor(){}
 
-  parentMessageService(){
-    return this.textServiceParent;
-  }
 
   childMessageService(){
     return this.textServiceChild;
