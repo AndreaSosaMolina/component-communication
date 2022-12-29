@@ -18,15 +18,15 @@ export class ChildComponent  {
   // utilizando las variables y metodos del servicio
   constructor( private serviceData: ServicioService){}
 
-  serviceMessageChild(){
+  serviceMessageChild(): void {
     this.messageFromChildren.emit(this.serviceData.childMessageService());
   }
 
-  output(){
+  output(): void {
     this.messageFromChildren.emit('Child using output event');
   }
 
-  observable(){
+  observable(): void {
     this.serviceData.messageObserChild().subscribe(this.messageFromChildren)
   }
 

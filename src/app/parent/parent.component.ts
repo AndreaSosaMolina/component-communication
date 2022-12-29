@@ -27,17 +27,17 @@ export class ParentComponent {
 
 
   // metodo para mostrar el mensaje desde el servicio hasta este componente
-  service(){
+  service(): void {
     this.messageForChild =  this.serviceData.textServiceParent;
   }
 
   // metodo usando el Input del hijo para mostrar el mensaje
-  input(){
+  input(): void {
     this.messageForChild = 'parent using input property'
   }
 
   // metodo usando el behaviorsub desde el servicio
-  observable(){
+  observable(): void {
     this.serviceData.messageObser().subscribe(text => {this.messageForChild = text});
   }
 }
